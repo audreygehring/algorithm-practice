@@ -32,16 +32,29 @@ let concat = (arr1, arr2) => {
   return joined;
 };
 
-insert = (arr, item, index) => {
-
-}
-
-count = (arr, item) => {
-
+let insert = (arr, item, index) => {
+  arr.splice(index, 0, item);
+  return arr;
 };
 
-duplicates = (arr) => {
+let count = (arr, item) => {
+  let total = 0;
+  for (var i = arr.length; i--;) {
+    if(arr[i] === item) {
+      total += 1;
+    }
+  }
+  return total;
+};
 
+let duplicates = (arr) => {
+  arr.sort();
+  let duplicateArray = [];
+  for (var i = arr.length; i--;) {
+    if (arr[i] === arr[i - 1]);
+    duplicateArray.shift(arr[i]);
+  }
+  return duplicateArray;
 };
 
 square = (arr) => {
