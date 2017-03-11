@@ -12,20 +12,24 @@ let append = (arr, item) => {
   return arr;
 };
 
-truncate = (arr) => {
-
+let truncate = (arr) => {
+  arr.pop()
+  return arr;
 };
 
-prepend = (arr, item) => {
-
+let prepend = (arr, item) => {
+  arr.unshift(item);
+  return arr;
 };
 
-curtail = (arr) => {
-
+let curtail = (arr) => {
+  arr.shift();
+  return arr;
 };
 
-concat = (arr1, arr2) => {
-
+let concat = (arr1, arr2) => {
+  let joined = arr1.concat(arr2);
+  return joined;
 };
 
 insert = (arr, item, index) => {
