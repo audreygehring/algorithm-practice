@@ -1,7 +1,7 @@
-reduceString = (str, amount) => {
+let reduceString = (str, amount) => {
 
 };
 
-reverseString = (str) => {
+let reverseString = (str) => {
 
 };

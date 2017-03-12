@@ -13,7 +13,7 @@ let append = (arr, item) => {
 };
 
 let truncate = (arr) => {
-  arr.pop()
+  arr.pop();
   return arr;
 };
 
@@ -48,19 +48,37 @@ let count = (arr, item) => {
 };
 
 let duplicates = (arr) => {
-  arr.sort();
-  let duplicateArray = [];
-  for (var i = arr.length; i--;) {
-    if (arr[i] === arr[i - 1]);
-    duplicateArray.shift(arr[i]);
+  let singles = [];
+  let duplicates = [];
+
+
+// work through this one
+  arr.forEach((item) => {
+    if (duplicates.indexOf(item) > -1 && singles.indexOf(item) === -1){
+      singles.push(item);
+    }
+    else {
+      duplicates.push(item);
+    }
+  });
+  return singles;
+};
+
+let square = (arr) => {
+  let squared = [];
+  arr.forEach((item) => {
+    squared.push(item * item);
+  });
+  return squared;
+};
+
+let findAllOccurrences = (arr, item) => {
+  let indexArray = [];
+
+  for(var i = 0; i < arr.length; i++) {
+    if (arr[i] === item) {
+      indexArray.push(i);
+    }
   }
-  return duplicateArray;
-};
-
-square = (arr) => {
-
-};
-
-findAllOccurrences = (arr, item) => {
-
+  return indexArray;
 };
